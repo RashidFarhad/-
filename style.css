@@ -14,7 +14,7 @@ html, body {
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #2e6de2 0%, #597e2a 25%, #a13f89 50%, #f093b6 75%, #4d300f 100%);
+    background: linear-gradient(135deg, #2c3e52 0%, #fd746a 25%, #2c3e52 50%, #fd746a 75%, #2c3e52 100%);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
     display: flex;
@@ -144,4 +144,5 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
 
