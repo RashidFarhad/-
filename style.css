@@ -74,8 +74,8 @@ img  {
     transition: all 0.25s ease;
   }
 /* WhatsApp - green glow */
-.icons a.whatsapp {
-    box-shadow: 0 0 15px #25D366;
+.whatsapp img {
+    filter: drop-shadow(0 0 6px #25D366);
 }
 
 /* Snapchat - yellow glow */
@@ -149,5 +149,6 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
 
 
