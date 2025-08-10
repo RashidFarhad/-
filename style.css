@@ -95,7 +95,27 @@ img  {
     border-radius: 50%;
     transform: scale(1.2);
   }
+/* WhatsApp (green shadow) */
+.whatsapp-icon {
+    filter: drop-shadow(0 0 5px #25D366); /* WhatsApp green */
+}
 
+/* Snapchat (yellow shadow) */
+.snapchat-icon {
+    filter: drop-shadow(0 0 5px #FFFC00); /* Snapchat yellow */
+}
+
+/* TikTok (white shadow) */
+.tiktok-icon {
+    filter: drop-shadow(0 0 5px white);
+}
+
+/* Instagram (gradient shadow) */
+.instagram-icon {
+    filter: drop-shadow(0 0 5px rgba(193,53,132,0.8)) 
+            drop-shadow(0 0 8px rgba(253,29,29,0.8)) 
+            drop-shadow(0 0 12px rgba(245,96,64,0.8));
+}
   .icons a:hover svg {
     fill: black;
   }
@@ -144,6 +164,7 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
 
 
 
