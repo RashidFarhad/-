@@ -128,12 +128,14 @@ footer {
   flex-shrink: 0;
   background-color: #000;       /* black background */
   color: white;
+  font-size: 0.85rem; /* smaller text */
   text-align: center;
   padding: 15px 10px;
   box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.5); /* subtle grey glow */
 }
 footer a {
-  color: #bbb;               /* light grey link color */
+  color: #bbb;    /* light grey link color */
+  font-size: 0.85rem; /* smaller text */
   text-decoration: none;     /* no underline */
   transition: color 0.3s ease;
 }
@@ -142,4 +144,5 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
 
