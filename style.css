@@ -45,7 +45,6 @@ img  {
   
   width: 80px;
   height: auto;
-  
   display: block;
   margin: 0px auto;
   filter: drop-shadow(0 0 5px white)
@@ -132,5 +131,15 @@ footer {
   text-align: center;
   padding: 15px 10px;
   box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.5); /* subtle grey glow */
+}
+footer a {
+  color: #bbb;               /* light grey link color */
+  text-decoration: none;     /* no underline */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;               /* white on hover */
+  /* no underline on hover either */
 }
 
