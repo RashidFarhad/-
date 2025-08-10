@@ -32,11 +32,12 @@ function typeWriter(elementId, text, speed, isLink = false, linkHref = "") {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    typeWriter("typewriter1", "Sarwat Samih Yasin", 100);
-    typeWriter("typewriter2", "… پەیوەندیکردن لە رێگەی تێلێگرام -" , 100, true, "https://t.me/barzaniii15");
-     typeWriter("typewriter3", "… پەیوەندیکردن لە رێگەی ئێمەیل -", 100, true, "mailto:sarwatsamih1@gmail.com");
+    typeWriter("typewriter1", "Rashid Farhad", 100);
+    typeWriter("typewriter2", "… پەیوەندیکردن لە رێگەی تێلێگرام - " , 100, true, "https://t.me/rashidfarahd");
+     typeWriter("typewriter3", "… پەیوەندیکردن لە رێگەی ئێمەیل -", 100, true, "mailto:rashidfarhad122@gmail.com");
 
 });
+
 
 
 
