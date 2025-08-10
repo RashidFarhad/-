@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
     font-family: 'Rabar 021';
     src: url('fonts/Rabar_021.ttf') format('truetype');
   }
@@ -41,12 +41,15 @@ main {
     margin-bottom: 40px;
   }
 img  {
+  
   width: 80px;
   height: auto;
   display: block;
   margin: 0px auto;
   filter: drop-shadow(0 0 5px white)
           drop-shadow(0 0 15px white);
+
+
 }
   .icons {
     display: flex;
@@ -69,6 +72,29 @@ img  {
     border-radius: 50px;
     transition: all 0.25s ease;
   }
+/* WhatsApp - green glow */
+.whatsapp img {
+    filter: drop-shadow(0 0 6px #25D366);
+}
+
+/* Snapchat - yellow glow */
+.icons a.snapchat {
+    box-shadow: 0 0 15px #FFFC00;
+}
+
+/* TikTok - white glow */
+.icons a.tiktok {
+    box-shadow: 0 0 15px white;
+}
+
+/* Instagram - gradient glow simulation */
+.icons a.instagram {
+    box-shadow: 
+        0 0 10px #f58529,
+        0 0 15px #dd2a7b,
+        0 0 20px #8134af,
+        0 0 25px #515bd4;
+}
   /* Hover colors */
   .icons a.instagram:hover { background: linear-gradient(#F9CE34,#EE2A7B,#6228D7); box-shadow: 0 0 15px #FA003F; }
   .icons a.tiktok:hover { background: #fcfafa; box-shadow: 0 0 15px #fdfcfc; }
