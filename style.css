@@ -1,20 +1,21 @@
-
-  @font-face {
+@font-face {
     font-family: 'Rabar 021';
     src: url('fonts/Rabar_021.ttf') format('truetype');
-  }
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;            /* no scroll */
-  -webkit-user-select: none;   /* Safari */
-  -ms-user-select: none;       /* IE10+ */
-  user-select: none;           /* modern browsers */
 }
-  body {
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;            /* no scroll */
+    -webkit-user-select: none;   /* Safari */
+    -ms-user-select: none;       /* IE10+ */
+    user-select: none;           /* modern browsers */
+}
+
+body {
     margin: 0;
     height: 100vh;
     background: linear-gradient(135deg, #2c3e52 0%, #fd746a 25%, #2c3e52 50%, #fd746a 75%, #2c3e52 100%);
@@ -27,42 +28,73 @@ html, body {
     font-family: 'Rabar 021', sans-serif;
     color: cyan;
     text-align: center;
-  }
+}
 
-  @keyframes gradientMove {
+@keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
-main {
-  flex: 1 0 auto;
 }
-  h1 {
+
+main {
+    flex: 1 0 auto;
+}
+
+h1 {
     font-size: 2rem;
     margin-bottom: 40px;
-  }
-img  {
-  
-  width: 80px;
-  height: auto;
-  display: block;
-  margin: 0px auto;
-  filter: drop-shadow(0 0 5px white)
-          drop-shadow(0 0 15px white);
-
-
 }
-  .icons {
+
+/* People image */
+img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    filter: drop-shadow(0 0 5px white)
+            drop-shadow(0 0 15px white);
+}
+
+/* Social media icons */
+.icons {
     display: flex;
     gap: 20px;
-  }
-.icons img {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
-  transition: all 0.3s ease;
 }
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* WhatsApp - green glow */
+.whatsapp img {
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
+            drop-shadow(0 0 6px #25D366);
+}
+
+/* Snapchat - yellow glow */
+.snapchat img {
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
+            drop-shadow(0 0 6px #FFFC00);
+}
+
+/* TikTok - white glow */
+.tiktok img {
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
+            drop-shadow(0 0 6px white);
+}
+
+/* Instagram - gradient glow */
+.instagram img {
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
+            drop-shadow(0 0 4px #f58529)
+            drop-shadow(0 0 6px #dd2a7b)
+            drop-shadow(0 0 8px #8134af)
+            drop-shadow(0 0 10px #515bd4);
+}
+
 .icons a {
     width: 60px;
     height: 60px;
@@ -72,41 +104,31 @@ img  {
     align-items: center;
     border-radius: 50px;
     transition: all 0.25s ease;
-  }
-/* WhatsApp - green glow */
-.whatsapp img {
-    filter: drop-shadow(0 0 6px #25D366);
 }
 
-/* Snapchat - yellow glow */
-.icons a.snapchat {
-    box-shadow: 0 0 15px #FFFC00;
+/* Hover styles */
+.icons a.instagram:hover {
+    background: linear-gradient(#F9CE34,#EE2A7B,#6228D7);
 }
 
-/* TikTok - white glow */
-.icons a.tiktok {
-    box-shadow: 0 0 15px white;
+.icons a.tiktok:hover {
+    background: #fcfafa;
 }
 
-/* Instagram - gradient glow simulation */
-.icons a.instagram {
-    box-shadow: 
-        0 0 10px #f58529,
-        0 0 15px #dd2a7b,
-        0 0 20px #8134af,
-        0 0 25px #515bd4;
+.icons a.snapchat:hover {
+    background: #FFD700;
 }
-  /* Hover colors */
-  .icons a.instagram:hover { background: linear-gradient(#F9CE34,#EE2A7B,#6228D7); box-shadow: 0 0 15px #FA003F; }
-  .icons a.tiktok:hover { background: #fcfafa; box-shadow: 0 0 15px #fdfcfc; }
-  .icons a.snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
-  .icons a.whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25D366; }
-  .icons a:hover {
+
+.icons a.whatsapp:hover {
+    background: #25d366;
+}
+
+.icons a:hover {
     border-radius: 50%;
     transform: scale(1.1);
-    box-shadow: 0 0 25px currentColor;
-  }
-/* General style for both typewriters */
+}
+
+/* Typewriter text */
 .typewriter {
     font-family: 'Rabar 021' , sans-serif;
     font-size: 14px;
@@ -117,38 +139,38 @@ img  {
     display: inline-block;
     white-space: pre-wrap;     /* Keep spaces and line breaks */
 }
-/* When typing starts, fade in */
+
 .typewriter.active {
     opacity: 1;
 }
+
 #typewriter1 {
-  border-bottom: 2px solid grey; 
-  display: block;
-  border-bottom: 2px solid grey;
-  padding-bottom: 8px;
-  margin: 15px auto;
-  width: 275px;
-  text-align:center ;
+    border-bottom: 2px solid grey; 
+    display: block;
+    padding-bottom: 8px;
+    margin: 15px auto;
+    width: 275px;
+    text-align:center;
 }
+
+/* Footer */
 footer {
-  flex-shrink: 0;
-  background-color: #000;       /* black background */
-  color: white;
-  font-size: 0.85rem; /* smaller text */
-  text-align: center;
-  padding: 15px 10px;
-  box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.5); /* subtle grey glow */
+    flex-shrink: 0;
+    background-color: #000;       /* black background */
+    color: white;
+    font-size: 0.85rem; /* smaller text */
+    text-align: center;
+    padding: 15px 10px;
+    box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.5); /* subtle grey glow */
 }
+
 footer a {
-  color: #bbb;    /* light grey link color */
-  font-size: 0.85rem; /* smaller text */
-  text-decoration: none;     /* no underline */
-  transition: color 0.3s ease;
+    color: #bbb;    /* light grey link color */
+    font-size: 0.85rem; /* smaller text */
+    text-decoration: none;     /* no underline */
+    transition: color 0.3s ease;
 }
+
 footer a:hover {
-  color: #fff;               /* white on hover */
-  /* no underline on hover either */
+    color: #fff;               /* white on hover */
 }
-
-
-
