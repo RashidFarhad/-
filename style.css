@@ -1,4 +1,4 @@
- @font-face {
+  @font-face {
     font-family: 'Rabar 021';
     src: url('fonts/Rabar_021.ttf') format('truetype');
   }
@@ -6,8 +6,6 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;            /* no scroll */
   -webkit-user-select: none;   /* Safari */
   -ms-user-select: none;       /* IE10+ */
@@ -16,7 +14,7 @@ html, body {
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #2c3e52 0%, #fd746a 25%, #2c3e52 50%, #fd746a 75%, #2c3e52 100%);
+    background: linear-gradient(135deg, #2e6de2 0%, #597e2a 25%, #a13f89 50%, #f093b6 75%, #4d300f 100%);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
     display: flex;
@@ -33,9 +31,7 @@ html, body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
-main {
-  flex: 1 0 auto;
-}
+
   h1 {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -44,6 +40,7 @@ img  {
   
   width: 80px;
   height: auto;
+  
   display: block;
   margin: 0px auto;
   filter: drop-shadow(0 0 5px white)
@@ -62,60 +59,54 @@ img  {
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
   transition: all 0.3s ease;
 }
-.icons a {
+
+
+  .icons a {
     width: 60px;
     height: 60px;
-    display: inline-block;
-    padding: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
+  
+    border-radius: 10px;
     transition: all 0.25s ease;
   }
-/* WhatsApp - green glow */
-.whatsapp img {
-    filter: drop-shadow(0 0 6px #25D366);
-}
 
-/* Snapchat - yellow glow */
-.icons a.snapchat {
-    box-shadow: 0 0 15px #FFFC00;
-}
+  .icons svg {
+    width: 30px;
+    height: 30px;
+    
+    transition: all 0.25s ease;
+  }
 
-/* TikTok - white glow */
-.icons a.tiktok {
-    box-shadow: 0 0 15px white;
-}
-
-/* Instagram - gradient glow simulation */
-.icons a.instagram {
-    box-shadow: 
-        0 0 10px #f58529,
-        0 0 15px #dd2a7b,
-        0 0 20px #8134af,
-        0 0 25px #515bd4;
-}
   /* Hover colors */
-  .icons a.instagram:hover { background: linear-gradient(#F9CE34,#EE2A7B,#6228D7); box-shadow: 0 0 15px #FA003F; }
+  .icons a.facebook:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
+  .icons a.instagram:hover { background: linear-gradient(#F9CE34,#EE2A7B,#6228D7); box-shadow: 0 0 15px #E1306C; }
   .icons a.tiktok:hover { background: #fcfafa; box-shadow: 0 0 15px #fdfcfc; }
   .icons a.snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
   .icons a.whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25D366; }
-  .icons a:hover {
+.icons a.telegram:hover { background: #6360e0; box-shadow: 0 0 15px #726ae0; }
+  
+.icons a:hover {
     border-radius: 50%;
-    transform: scale(1.1);
-    box-shadow: 0 0 25px currentColor;
+    transform: scale(1.2);
+  }
+
+  .icons a:hover svg {
+    fill: black;
   }
 /* General style for both typewriters */
 .typewriter {
     font-family: 'Rabar 021' , sans-serif;
     font-size: 14px;
     color: black;
-    text-shadow: 0 0 5px grey, 0 0 10px grey;
+    text-shadow: 0 0 5px white, 0 0 10px white;
     opacity: 0;                /* Start hidden for smooth appearance */
     transition: opacity 0.5s ease-in;
     display: inline-block;
     white-space: pre-wrap;     /* Keep spaces and line breaks */
 }
+
 /* When typing starts, fade in */
 .typewriter.active {
     opacity: 1;
@@ -128,6 +119,11 @@ img  {
   margin: 15px auto;
   width: 275px;
   text-align:center ;
+
+}
+/* When typing starts, fade in */
+.typewriter.active {
+    opacity: 1;
 }
 footer {
   flex-shrink: 0;
@@ -148,3 +144,4 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
