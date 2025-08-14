@@ -3,6 +3,7 @@
     src: url('fonts/Rabar_021.ttf') format('truetype');
   }
 html, body {
+  place-self: center;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -144,5 +145,6 @@ footer a:hover {
   color: #fff;               /* white on hover */
   /* no underline on hover either */
 }
+
 
 
